@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(122, 0, 0);
+}
+
+#div1 {
+    color: rgb(0, 0, 0);
+}
+
+.card-element {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+#search-form {
+    margin: 2rem;
+}
+
+#city-section {
+    margin: 2rem;
+}
+
+#temp-section {
+    margin: 2rem;
+}
+
+#condition-section {
+    margin: 2rem;
+}
+
+#info-section {
+    margin: 2rem;
+}
