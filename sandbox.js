@@ -1,5 +1,6 @@
 //Wednesday 7:51pm this is pulling data but don't know how to get it into "let weatherData variable"
 
+
 console.log('hello world')
 let appId = '151fc331ffb2d59e71cc69883616aee0';
 let zipcode = 92587;
@@ -10,7 +11,9 @@ const api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},
 let weatherData = {
     city: '',
     temps: {
+        kelvin: 0,
         fahrenheit: 0,
+        celsius: 0,
     },
     windspeed: '5mph'
 }
@@ -18,8 +21,8 @@ let weatherData = {
 //console.log("init",weatherData)
 
 async function getWeather () {
-    const response = await fetch(api_url);
-    const apiData = await response.json();
+    const response = await axios.get(api_url);
+    const apiData = response.data;
     console.log("ALLDATA",apiData);
     // console.log(apiData.name);
     console.log("before",weatherData)
@@ -33,7 +36,7 @@ async function getWeather () {
     return weatherData;
 }
 
-getWeather();
+getWeather().then(getSunshine);
 
 let buttonclick = getWeather();
 
@@ -43,7 +46,7 @@ function getSunshine() {
     console.log(weatherData.temp)
 }
 
-getSunshine();
+// getSunshine();
 
 // settingStateFunction
 
@@ -51,6 +54,7 @@ getSunshine();
 
 //main API fetch and response which is working (hardcoded to appId and zipcode variables currently)
 //need to add async/await
+
 // axios
 // .get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&appid=${appId}`)
 // .then(res => console.log(res.data))
