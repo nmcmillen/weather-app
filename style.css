@@ -6,12 +6,14 @@ body {
     color: rgb(0, 0, 0);
 }
 
+
+
 #search-section {
     margin: 2rem;
 }
 
 #city-section {
-    margin: 2rem;
+    margin: 2rem;   
 }
 
 #temp-section {
@@ -24,4 +26,8 @@ body {
 
 #info-section {
     margin: 2rem;
+}
+
+#hide-form {
+    display: none;
 }
