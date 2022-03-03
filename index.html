@@ -11,40 +11,55 @@
 </head>
 
 <body>
-    <div class="card-element">
+
+    <div class="container">
+      
+      <!-- Working Input Box -->
+        <!-- <input
+          type="text"
+          id="search-form"
+          name="value"
+          placeholder="Insert Zipcode"
+        />
+        <button type="submit" onclick="getWeather()">Get Weather</button -->
+
+
 
     <!-- Input form section -->
-        <div class="input-group mb-3 w-25 mx-auto" id="search-form">
-            <input type="text" class="form-control" placeholder="Input Zipcode" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group mb-3 mx-auto" id="search-section">
+            <input type="text" class="form-control" id="search-form" name="value" placeholder="Input Zipcode" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <span class="input-group-text" id="basic-addon2">Get Weather</span>
+              <button class="input-group-text" id="weather-button" type="submit" onclick="getWeather()">Get Weather</button>
             </div>
           </div>
 
+    <!-- wrapper for content section to hide/show -->
+  <div #id="hide-form">
+
     <!-- City Section -->
-        <div class="card w-25 text-center mx-auto" id="city-section">
+        <div class="card text-center mx-auto" id="city-section">
             <h5 class="card-header">City</h5>
             <div class="card-body">
                 <div class="row align-items-center">
-                    <div class="col">
-                      Lexington
+                    <div class="col" id="city-name">
+                      Placeholder City
                     </div>
                 </div>
             </div>
         </div>
 
     <!-- Temperature Section -->
-    <div class="card w-25 text-center mx-auto" id="temp-section">
-        <h5 class="card-header">Featured</h5>
+    <div class="card text-center mx-auto" id="temp-section">
+        <h5 class="card-header">Temperature</h5>
         <div class="card-body">
             <div class="row align-items-center">
-                <div class="col">
+                <div class="col" id="kelvin">
                   Kelvin
                 </div>
-                <div class="col">
+                <div class="col" id="fahrenheit">
                   Fahrenheit
                 </div>
-                <div class="col">
+                <div class="col" id="celsius">
                   Celsius
                 </div>
             </div>
@@ -52,11 +67,11 @@
     </div>
 
     <!-- Weather Condition -->
-    <div class="card w-25 text-center mx-auto"  id="condition-section">
+    <div class="card text-center mx-auto"  id="condition-section">
         <h5 class="card-header">Condition</h5>
         <div class="card-body">
             <div class="row align-items-center">
-                <div class="col">
+                <div class="col" id="weather-condition">
                   Light Rain
                 </div>
             </div>
@@ -64,7 +79,7 @@
     </div>
 
     <!-- Other Info -->
-    <div class="card w-25 text-center mx-auto"  id="info-section">
+    <div class="card text-center mx-auto"  id="info-section">
         <h5 class="card-header">Other Info</h5>
         <div class="card-body">
             <div class="row align-items-center">
@@ -75,6 +90,8 @@
         </div>
     </div>
 
+  <!-- End of hide/show -->
+  </div>
 
 <!-- Ending div for entire card page -->
 </div>
