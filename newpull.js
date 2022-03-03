@@ -6,12 +6,8 @@ let appId = '151fc331ffb2d59e71cc69883616aee0';
 let weatherData = {
     city: '',
     condition: '',
+    icon: '',
     temp: 0,
-    // temps: {
-    //     kelvin: 0,
-    //     fahrenheit: 0,
-    //     celsius: 0,
-    // },
 }
 
 async function getData () {
@@ -26,6 +22,8 @@ async function getData () {
       }
 }
 
+//return a .catch with error notice in above function
+
 // getData();
 
 async function updateState () {
@@ -39,13 +37,13 @@ async function updateState () {
     // Temperature
     weatherData.temp = apiData.main.temp;
     // console.log("Success temp",apiData.main.temp);
+    weatherData.icon = apiData.weather[0].icon;
     return weatherData;
 }
 
 // updateState();
 
 async function updateDOM () {
-    // await getData();
     await updateState();
     // console.log(weatherData);
     // Makes the HTML visible again from being hidden in CSS
@@ -55,4 +53,5 @@ async function updateDOM () {
     document.getElementById('fahrenheit').textContent = Math.round(weatherData.temp) + "°F";
     document.getElementById('celsius').textContent = Math.round((weatherData.temp-32)/1.8) + "°C";
     document.getElementById('weather-condition').textContent = weatherData.condition;
+    document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
 }
