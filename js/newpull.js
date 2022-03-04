@@ -1,13 +1,6 @@
 console.log('hello world')
 let appId = '151fc331ffb2d59e71cc69883616aee0';
 
-// let form = document.querySelector("form");
-// form.addEventListener("submit", function(event) {
-//   let code = form.elements.value.value;
-//   event.preventDefault();
-//   getData(code);
-// });
-
 let weatherData = {
     city: '',
     condition: '',
@@ -28,21 +21,8 @@ async function getData() {
     return apiData
   }
 
-// Working async fetch function but does not have a catch to display errors.
-// async function getData () {
-//     let zipcode = document.getElementById('search-form').value;
-//     response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`);
-//     apiData = response.data;
-//     console.log("first test",apiData)
-//     console.log(apiData.status);
-//     if (apiData.status !== 200) {
-//         return "aldsjfkalkjdsf!";
-//       } else {
-//         return apiData;
-//       }
-// }
-
-function zipError() {
+  
+  function zipError() {
     document.getElementById('error-message').style.display = 'block';
 }
 
@@ -78,3 +58,44 @@ async function updateDOM () {
     document.getElementById('weather-condition').textContent = weatherData.condition;
     document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
 }
+
+
+// Geo Location (only works in console)
+var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+};
+
+function success(pos) {
+    var crd = pos.coords;
+    
+    console.log(crd)
+    
+    console.log('Your current position is:');
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+//   End Geo location
+
+
+// Working async fetch function but does not have a catch to display errors.
+// async function getData () {
+//     let zipcode = document.getElementById('search-form').value;
+//     response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`);
+//     apiData = response.data;
+//     console.log("first test",apiData)
+//     console.log(apiData.status);
+//     if (apiData.status !== 200) {
+//         return "aldsjfkalkjdsf!";
+//       } else {
+//         return apiData;
+//       }
+// }

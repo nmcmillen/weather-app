@@ -7,10 +7,12 @@ body {
     /* margin: 0; */
     font-family: "Open Sans", Roboto;
     font-size: 120%;
+    background-color: darkgray;
     background: linear-gradient( rgba(197, 197, 197, 0.7), rgba(83, 83, 83, 0.7) ), url("https://i.pinimg.com/originals/f5/3d/3f/f53d3f8a2b09f6431df49140c39ba639.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0, center;
+    font-family: 'Kumbh Sans', sans-serif;
   }
 
 #div1 {
@@ -29,6 +31,7 @@ body {
 .card-header {
     background-color: rgba(0, 0, 0, 0.9);
     border: none;
+    font-weight: bold;
 }
 
 #search-section {
@@ -85,10 +88,11 @@ body {
 }
 
 #error-message {
+    max-width: 540px;
+    margin: auto;
     display: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     color: orangered;
     text-align: center;
-    width: 50%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
