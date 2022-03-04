@@ -16,25 +16,35 @@ let weatherData = {
 }
 
 
-
-
-async function getData () {
+async function getData() {
+    try {
     let zipcode = document.getElementById('search-form').value;
     response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`);
     apiData = response.data;
-    console.log("first test",apiData)
-    if (apiData.status !== 200) {
-        return "error!";
-      } else {
-        return apiData;
-      }
-}
+    } catch (err) {
+        console.error('No ZIP code information available', err);
+        return zipError();
+    }
+    return apiData
+  }
 
-// function zipError() {
-//     document.getElementById('error-message').style.display = 'block';
+// Working async fetch function but does not have a catch to display errors.
+// async function getData () {
+//     let zipcode = document.getElementById('search-form').value;
+//     response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`);
+//     apiData = response.data;
+//     console.log("first test",apiData)
+//     console.log(apiData.status);
+//     if (apiData.status !== 200) {
+//         return "aldsjfkalkjdsf!";
+//       } else {
+//         return apiData;
+//       }
 // }
 
-//return a .catch with error notice in above function
+function zipError() {
+    document.getElementById('error-message').style.display = 'block';
+}
 
 // getData();
 
@@ -60,6 +70,7 @@ async function updateDOM () {
     await updateState();
     // Makes the HTML visible again from being hidden in CSS
     document.getElementById('hide-form').style.display = 'block';
+    document.getElementById('error-message').style.display = 'none';
     document.getElementById('city-name').textContent = weatherData.city;
     document.getElementById('kelvin').textContent = Math.round((weatherData.temp-32)*(5/9)+273.15) + " K";
     document.getElementById('fahrenheit').textContent = Math.round(weatherData.temp) + "°F";
@@ -67,8 +78,3 @@ async function updateDOM () {
     document.getElementById('weather-condition').textContent = weatherData.condition;
     document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
 }
-
-getData()
-    .catch(e => {
-        console.log(e);
-    });
