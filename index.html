@@ -27,11 +27,13 @@
 
     <!-- Input form section -->
         <div class="input-group mb-3 mx-auto mw-50" id="search-section">
-            <input type="text" class="form-control" id="search-form" name="value" placeholder="Input Zipcode" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" id="search-form" name="value" placeholder="Enter ZIP Code: 50210" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
               <button class="input-group-text btn-dark" id="weather-button" type="submit" onclick="updateDOM()">Get Weather</button>
             </div>
           </div>
+
+    <p id="error-message">Please input a valid ZIP code.</p>
 
     <!-- wrapper for content section to hide/show -->
   <div id="hide-form">

@@ -15,6 +15,9 @@ let weatherData = {
     temp: 0,
 }
 
+
+
+
 async function getData () {
     let zipcode = document.getElementById('search-form').value;
     response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`);
@@ -26,6 +29,10 @@ async function getData () {
         return apiData;
       }
 }
+
+// function zipError() {
+//     document.getElementById('error-message').style.display = 'block';
+// }
 
 //return a .catch with error notice in above function
 
@@ -58,5 +65,10 @@ async function updateDOM () {
     document.getElementById('fahrenheit').textContent = Math.round(weatherData.temp) + "°F";
     document.getElementById('celsius').textContent = Math.round((weatherData.temp-32)/1.8) + "°C";
     document.getElementById('weather-condition').textContent = weatherData.condition;
-    document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
 }
+
+getData()
+    .catch(e => {
+        console.log(e);
+    });
