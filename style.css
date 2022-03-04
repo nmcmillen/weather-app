@@ -1,0 +1,98 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* margin: 0; */
+    font-family: "Open Sans", Roboto;
+    font-size: 120%;
+    background-color: darkgray;
+    background: linear-gradient( rgba(197, 197, 197, 0.7), rgba(83, 83, 83, 0.7) ), url("https://i.pinimg.com/originals/f5/3d/3f/f53d3f8a2b09f6431df49140c39ba639.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0, center;
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+
+#div1 {
+    color: rgb(0, 0, 0);
+}
+
+.btn-dark {
+    background-color: rgb(255, 0, 0);
+    border: none;
+}
+
+.card-body {
+    border: none;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+    font-weight: bold;
+}
+
+#search-section {
+    margin: 2rem;
+    max-width: 540px;
+}
+
+#city-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;
+    border: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(134, 134, 134);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    max-width: 540px;
+}
+
+#temp-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;
+    border: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(134, 134, 134);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    max-width: 540px;
+}
+
+#condition-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(134, 134, 134);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    max-width: 540px;
+}
+
+#info-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(134, 134, 134);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    max-width: 540px;
+}
+
+#hide-form {
+    display: none;
+}
+
+#search-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+}
+
+#error-message {
+    max-width: 540px;
+    margin: auto;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: orangered;
+    text-align: center;
+    border-radius: 10px;
+}
