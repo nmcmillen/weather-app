@@ -26,10 +26,10 @@
 
 
     <!-- Input form section -->
-        <div class="input-group mb-3 mx-auto" id="search-section">
+        <div class="input-group mb-3 mx-auto mw-50" id="search-section">
             <input type="text" class="form-control" id="search-form" name="value" placeholder="Input Zipcode" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <button class="input-group-text" id="weather-button" type="submit" onclick="updateDOM()">Get Weather</button>
+              <button class="input-group-text btn-dark" id="weather-button" type="submit" onclick="updateDOM()">Get Weather</button>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
   <div id="hide-form">
 
     <!-- City Section -->
-        <div class="card text-center mx-auto" id="city-section">
+        <div class="card text-center mx-auto mw-50" id="city-section">
             <h5 class="card-header">City</h5>
             <div class="card-body">
                 <div class="row align-items-center">
@@ -49,7 +49,7 @@
         </div>
 
     <!-- Temperature Section -->
-    <div class="card text-center mx-auto" id="temp-section">
+    <div class="card text-center mx-auto mw-50" id="temp-section">
         <h5 class="card-header">Temperature</h5>
         <div class="card-body">
             <div class="row align-items-center">
@@ -67,7 +67,7 @@
     </div>
 
     <!-- Weather Condition -->
-    <div class="card text-center mx-auto"  id="condition-section">
+    <div class="card text-center mx-auto mw-50"  id="condition-section">
         <h5 class="card-header">Condition</h5>
         <div class="card-body">
             <div class="row align-items-center">
@@ -79,8 +79,8 @@
     </div>
 
     <!-- Other Info -->
-    <div class="card text-center mx-auto"  id="info-section">
-        <h5 class="card-header">Other Info</h5>
+    <div class="card text-center mx-auto mw-50"  id="info-section">
+        <h5 class="card-header">Icon</h5>
         <div class="card-body">
             <div class="row align-items-center">
                 <div class="col" id="weather-image">
@@ -96,28 +96,10 @@
 <!-- Ending div for entire card page -->
 </div>
 
-
-
-
-
-
-
-    <!-- <div class="card">
-        <form class="search" action="index.html">
-          <input
-            type="text"
-            class="search-bar"
-            name="zipcodeSearch"
-            placeholder="Search Zipcode"
-          />
-          <button type="submit">Get Weather</button>
-        </form>
-        <div id="getWeather"></div>
-      </div> -->
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="./node_modules/axios/dist/axios.min.js"></script>
-<script src="newpull.js"></script>
+<script src="/js/newpull.js"></script>
 
 </html>

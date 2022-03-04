@@ -1,7 +1,12 @@
 console.log('hello world')
 let appId = '151fc331ffb2d59e71cc69883616aee0';
-// let zipcode = document.getElementById('search-form').value;
-// const api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${appId}`;
+
+// let form = document.querySelector("form");
+// form.addEventListener("submit", function(event) {
+//   let code = form.elements.value.value;
+//   event.preventDefault();
+//   getData(code);
+// });
 
 let weatherData = {
     city: '',
@@ -37,6 +42,7 @@ async function updateState () {
     // Temperature
     weatherData.temp = apiData.main.temp;
     // console.log("Success temp",apiData.main.temp);
+    // Image Icon
     weatherData.icon = apiData.weather[0].icon;
     return weatherData;
 }
@@ -45,7 +51,6 @@ async function updateState () {
 
 async function updateDOM () {
     await updateState();
-    // console.log(weatherData);
     // Makes the HTML visible again from being hidden in CSS
     document.getElementById('hide-form').style.display = 'block';
     document.getElementById('city-name').textContent = weatherData.city;

@@ -1,33 +1,72 @@
+
 body {
-    background-color: rgb(122, 0, 0);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* margin: 0; */
+    font-family: "Open Sans", Roboto;
+    font-size: 120%;
+    background: linear-gradient( rgba(197, 197, 197, 0.7), rgba(0, 0, 0, 0.7) ), url("https://i.pinimg.com/originals/f5/3d/3f/f53d3f8a2b09f6431df49140c39ba639.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0, center;
+  }
 
 #div1 {
     color: rgb(0, 0, 0);
 }
 
+.btn-dark {
+    background-color: rgba(115, 115, 255, 0.8);;
+}
 
+.card-body {
+    border: none;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+}
 
 #search-section {
     margin: 2rem;
 }
 
 #city-section {
-    margin: 2rem;   
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;
+    border: none;
 }
 
 #temp-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
     margin: 2rem;
+    border: none;
 }
 
 #condition-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
     margin: 2rem;
+      
 }
 
 #info-section {
-    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 2rem;   
 }
 
 #hide-form {
     display: none;
+}
+
+#search-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
 }
