@@ -19,9 +19,9 @@ async function getData() {
         return zipError();
     }
     return apiData
-  }
+}
 
-  
+
   function zipError() {
     document.getElementById('error-message').style.display = 'block';
 }
