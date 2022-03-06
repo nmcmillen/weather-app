@@ -56,7 +56,7 @@ async function updateDOM () {
     document.getElementById('fahrenheit').textContent = Math.round(weatherData.temp) + "°F";
     document.getElementById('celsius').textContent = Math.round((weatherData.temp-32)/1.8) + "°C";
     document.getElementById('weather-condition').textContent = weatherData.condition;
-    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.icon}@4x.png`;
 }
 
 
