@@ -34,3 +34,6 @@ Build a weather app using a API fetch (with axios) that allows the user to searc
 - Temp: var element = document.createElement("elementName");
 - Condition: var element = document.createElement("elementName");
 - Other Info: var element = document.createElement("elementName");
+
+
+<!-- Test adding code to pseudocode vscode to github -->
