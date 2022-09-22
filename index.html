@@ -19,8 +19,6 @@
 
   <div class="container">
 
-
-
     <div class="mb-3 mx-auto mw-50 " id="search-section">
       <form id="form">
         <div class="row justify-content-center">
@@ -32,77 +30,77 @@
             <button class="input-group-text btn-dark" type="submit" onclick="updateDOM()">Get
               Weather</button>
           </div>
-          <div class="col-3 px-0" id="location-button">
-            <button class="input-group-text btn-dark" type="submit" onclick="getLocation()">Get
-              Location</button>
-          </div>
-        </div>
       </form>
+      <div class="col-3 px-0" id="location-button">
+        <button class="input-group-text btn-dark" type="submit" onclick="getLocation()">My
+          Location</button>
+      </div>
+    </div>
+  </div>
+
+  <p id="error-message">Please enter a valid ZIP code.</p>
+
+  <!-- wrapper for content section to hide/show -->
+  <div id="hide-form">
+
+    <!-- City Section -->
+    <div class="card text-center mx-auto mw-50" id="city-section">
+      <h5 class="card-header">City</h5>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col" id="city-name">
+            Placeholder City
+          </div>
+        </div>
+      </div>
     </div>
 
-    <p id="error-message">Please enter a valid ZIP code.</p>
-
-    <!-- wrapper for content section to hide/show -->
-    <div id="hide-form">
-
-      <!-- City Section -->
-      <div class="card text-center mx-auto mw-50" id="city-section">
-        <h5 class="card-header">City</h5>
-        <div class="card-body">
-          <div class="row align-items-center">
-            <div class="col" id="city-name">
-              Placeholder City
-            </div>
+    <!-- Temperature Section -->
+    <div class="card text-center mx-auto mw-50" id="temp-section">
+      <h5 class="card-header">Temperature</h5>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col" id="kelvin">
+            Kelvin
+          </div>
+          <div class="col" id="fahrenheit">
+            Fahrenheit
+          </div>
+          <div class="col" id="celsius">
+            Celsius
           </div>
         </div>
       </div>
-
-      <!-- Temperature Section -->
-      <div class="card text-center mx-auto mw-50" id="temp-section">
-        <h5 class="card-header">Temperature</h5>
-        <div class="card-body">
-          <div class="row align-items-center">
-            <div class="col" id="kelvin">
-              Kelvin
-            </div>
-            <div class="col" id="fahrenheit">
-              Fahrenheit
-            </div>
-            <div class="col" id="celsius">
-              Celsius
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Weather Condition -->
-      <div class="card text-center mx-auto mw-50" id="condition-section">
-        <h5 class="card-header">Condition</h5>
-        <div class="card-body">
-          <div class="row align-items-center">
-            <div class="col" id="weather-condition">
-              Light Rain
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Other Info -->
-      <div class="card text-center mx-auto mw-50" id="info-section">
-        <h5 class="card-header">Icon</h5>
-        <div class="card-body">
-          <div class="row align-items-center">
-            <div class="col" id="weather-image">
-              <img src="" alt="" id="weather-icon">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- End of hide/show -->
     </div>
 
-    <!-- Ending div for entire card page -->
+    <!-- Weather Condition -->
+    <div class="card text-center mx-auto mw-50" id="condition-section">
+      <h5 class="card-header">Condition</h5>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col" id="weather-condition">
+            Light Rain
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Info -->
+    <div class="card text-center mx-auto mw-50" id="info-section">
+      <h5 class="card-header">Icon</h5>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col" id="weather-image">
+            <img src="" alt="" id="weather-icon">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of hide/show -->
+  </div>
+
+  <!-- Ending div for entire card page -->
   </div>
 
 </body>
@@ -112,7 +110,5 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/main.js"></script>
 
-<!-- <script src="./node_modules/axios/dist/axios.min.js"></script>
-<script src="/js/newpull.js"></script> -->
 
 </html>
