@@ -85,6 +85,8 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
+    float: right;
+    margin-right: 0px;
 }
 
 #error-message {
